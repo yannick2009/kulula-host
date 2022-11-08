@@ -1,0 +1,40 @@
+@import "./import";
+@import "./components";
+@import "./layouts";
+@import "./mixins";
+@import "./box";
+
+// FONT IMPORTATION
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+// CSS init
+html,
+body,
+body::after,
+body::before,
+* {
+  margin: 0;
+  padding: 0;
+  color: $black;
+  font-size: 100%;
+  font-family: "lato", Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input,select {
+  outline: 0;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+.selected {
+  background: rgba(223, 172, 255, 0.3);
+  border-left: 8px solid $purple-1;
+}

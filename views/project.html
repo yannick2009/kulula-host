@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="/css/style.css" />
+      <!-- APP ICON -->
+      <link rel="shortcut icon" href="/img/logo.svg" type="image/x-icon" />
+      <!-- ICONS LINK -->
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer" />
+      <title>Kulula-scrum</title>
+   </head>
+   <body>
+      <section class="interface">
+         <!-- PROFIL PART -->
+         <header class="profil-header">
+            <!-- LOGO -->
+            <div class="logo">
+               <img src="/img/logo-2.svg" alt="kulula logo" />
+            </div>
+            <!-- LES INFOS & ACTIONS UTILISATEURS -->
+            <div class="actions">
+               <!-- ID UTILISATEUR -->
+               <p id="id-user">YK221789</p>
+               <!-- PARAMETRE -->
+               <a href="#"><i class="fa-solid fa-gear"></i></a>
+               <!-- MODIFICATION -->
+               <a href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+               <div class="info">
+                  <a href="#"
+                     ><img src="/img/user.jpg" alt="profil picture"
+                  /></a>
+                  <p>Administrateur</p>
+               </div>
+            </div>
+         </header>
+         <!-- SECTION DE GESTION DES PROJETS  -->
+         <div class="project">
+            <!-- MESSAGE & ILLUSTRATION -->
+            <div class="project-message"></div>
+            <!-- TITLE -->
+            <div class="title">
+               <p>Mes projets</p>
+            </div>
+            <!-- LISTE DES PROJETS -->
+            <div class="project-list">
+               <div class="project-list-btn">
+                  <button>
+                     Nouveau projet<i class="fa-solid fa-plus"></i>
+                  </button>
+               </div>
+               <div class="project-list-list">
+                  <!-- CARTE DE PROJET -->
+                  <div class="item">
+                     <img src="/img/fox.jpg" alt="project image" />
+                     <div class="text">
+                        <h3>Projet 1</h3>
+                        <p>
+                           Outils de gestion de projet selon le framework SCRUM
+                        </p>
+                     </div>
+                     <div class="action">
+                        <button class="project">
+                           <a style="color: white" href="roadmap.html"
+                              >Gerer le projet</a
+                           >
+                        </button>
+                        <button class="delete_project">
+                           <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <div class="backdrop">
+         <!--  -->
+      </div>
+   </body>
+</html>
+<script src="/js/app.js" defer></script>

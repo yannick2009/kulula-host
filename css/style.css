@@ -1,0 +1,788 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+.header_home {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(40deg, rgba(60, 9, 108, 0.9254901961), rgba(122, 44, 191, 0.5490196078)), url("/img/background/bkg.jpg");
+  background-size: cover;
+  background-position: left;
+  display: grid;
+  grid-template: 1fr/50% 50%;
+}
+
+.interface {
+  height: 100vh;
+  width: 100%;
+  background: #fdfdfd;
+  display: grid;
+  grid-template: 7% 93%/1fr;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.box {
+  width: 15rem;
+  height: fit-content;
+  background: #fdfdfd;
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+
+.header_home-left {
+  display: grid;
+  grid-template: 20% 50% 10%/1fr;
+  gap: 4rem;
+}
+.header_home-left-logo img {
+  width: 12rem;
+  margin: 2.5rem;
+}
+.header_home-left-text h1, .header_home-left-end h1 {
+  margin: 2.5rem;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fdfdfd;
+  text-transform: uppercase;
+}
+.header_home-left-text p, .header_home-left-end p {
+  margin: 1rem 2.5rem;
+  color: white;
+  line-height: 150%;
+}
+.header_home-left-text button, .header_home-left-end button {
+  background: rgb(123, 0, 255);
+  color: white;
+  font-size: 1rem;
+  padding: 1.5rem 2.5rem;
+  border-radius: 100px;
+  border: 0;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin: 3rem 2.5rem;
+}
+.header_home-left-text button:hover, .header_home-left-end button:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.header_home-left-text button:active, .header_home-left-end button:active {
+  transform: scale(1);
+  filter: brightness(1.5);
+}
+.header_home-left-end p {
+  color: rgba(255, 255, 255, 0.7);
+}
+.header_home-rigth {
+  display: grid;
+  place-items: center;
+}
+.header_home-rigth img {
+  width: 100%;
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
+}
+
+.interface .profil-header {
+  z-index: 2;
+  background: white;
+  box-shadow: 5px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.interface .profil-header #id-user {
+  font-size: 0.8rem;
+  margin: 0 2rem;
+  background: #b5b6b5;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 100px;
+}
+.interface .profil-header .logo img {
+  width: 5rem;
+  padding: 1rem;
+}
+.interface .profil-header .actions {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+.interface .profil-header .actions i:active {
+  color: #7b2cbf;
+}
+.interface .profil-header .actions > * {
+  margin: 0.5rem;
+}
+.interface .profil-header .actions form > * {
+  padding: 0.5rem;
+  border-radius: 100px;
+  border: 0;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin-right: 2rem;
+  outline: 0;
+}
+.interface .profil-header .actions form input {
+  width: 17rem;
+}
+.interface .profil-header .actions form input::placeholder {
+  font-size: 0.7rem;
+  font-style: italic;
+  padding: 0.5rem 1rem;
+  color: #ced4da;
+}
+.interface .profil-header .actions form button {
+  margin-left: -4.5rem;
+  background-color: #7b2cbf;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.interface .profil-header .actions form button i {
+  color: white;
+}
+.interface .profil-header .actions .info {
+  display: flex;
+  background: #fdfdfd;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+}
+.interface .profil-header .actions .info img {
+  width: 2rem;
+  border-radius: 100px;
+  margin-right: 0.5rem;
+}
+.interface .project {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 25% 3% 70%;
+}
+.interface .project-message {
+  background: white;
+  width: 80%;
+  margin: 1.5rem auto;
+  border-radius: 5px;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+  background: url("/img/background/bkg-nature.jpg");
+  background-position: center;
+}
+.interface .project .title {
+  width: 80%;
+  margin: 1rem auto;
+}
+.interface .project .title p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #3c096c;
+}
+.interface .project-list {
+  padding: 0.5rem 0;
+  width: 80%;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 90%;
+  gap: 1rem;
+}
+.interface .project-list-btn {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+}
+.interface .project-list-btn button {
+  padding: 0.5rem;
+  background: #7b2cbf;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.interface .project-list-btn button:active {
+  filter: brightness(1.15);
+}
+.interface .project-list-btn button i {
+  color: white;
+  margin-left: 0.5rem;
+}
+.interface .project-list-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+.interface .project-list-list .item {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: rgb(212, 212, 212);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50% 30% 20%;
+}
+.interface .project-list-list .item img {
+  width: 100%;
+  height: 100%;
+}
+.interface .project-list-list .item .text {
+  background-color: white;
+}
+.interface .project-list-list .item .text h3 {
+  padding: 0.5rem;
+  color: #212529;
+}
+.interface .project-list-list .item .text p {
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  color: rgb(186, 186, 186);
+}
+.interface .project-list-list .item .action {
+  background: white;
+  display: grid;
+  grid-template-columns: 70% 20%;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.interface .project-list-list .item .action button {
+  margin: 0.5rem 0;
+  border-radius: 3px;
+  border: 0;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.interface .project-list-list .item .action button:active {
+  filter: brightness(1.15);
+}
+.interface .project-list-list .item .action button:nth-child(1) {
+  color: white;
+  background: #68dd99;
+}
+.interface .project-list-list .item .action button i {
+  color: red;
+  font-size: 1.1rem;
+  padding: 0 0.5rem;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: 1fr;
+}
+.board-left {
+  overflow: hidden;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("/img/background/bkg-left.jpg");
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
+}
+.board-left ul {
+  margin-top: 4rem;
+}
+.board-left ul li {
+  font-size: 1.02rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+.board-left ul li a {
+  display: block;
+  color: #7b2cbf;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 1rem;
+}
+.board-left ul li a:hover {
+  background: rgba(223, 172, 255, 0.3);
+}
+.board-left ul li i {
+  font-size: 1.2rem;
+  margin: 0.5rem;
+  color: #7b2cbf;
+}
+
+.roadmap {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 5% 75% 10%;
+}
+.roadmap > * {
+  width: 85%;
+  margin: 0 auto;
+}
+.roadmap .title {
+  display: flex;
+  align-items: center;
+}
+.roadmap .title p {
+  font-size: 1.2rem;
+  color: #7b2cbf;
+}
+.roadmap .mark {
+  font-weight: 700;
+  display: grid;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.03);
+  grid-template-columns: 40% 15% 15% 30%;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+}
+.roadmap .mark p {
+  text-align: center;
+  font-size: 0.7rem;
+  margin-left: 1rem;
+}
+.roadmap .mark p:not(:last-child) {
+  border-right: 1px dashed rgba(128, 128, 128, 0.3);
+}
+.roadmap .pagination {
+  display: flex;
+  justify-content: flex-end;
+}
+.roadmap .pagination a button {
+  margin: 0.5rem;
+  padding: 1rem;
+  border-radius: 5px;
+  font-weight: 700;
+  color: white;
+  background-color: transparent;
+}
+.roadmap .pagination a .prec {
+  color: #7b2cbf;
+  border: 2px solid #7b2cbf;
+}
+.roadmap .pagination a .prec:active {
+  background: #7b2cbf;
+  color: white;
+  filter: brightness(1.3);
+}
+.roadmap .pagination a .next {
+  background: #7b2cbf;
+}
+.roadmap .pagination a .next:active {
+  filter: brightness(1.3);
+}
+.roadmap .list {
+  overflow: hidden;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(10, 1fr);
+  gap: 1rem;
+}
+.roadmap .list .task {
+  border-left: 5px solid orange;
+  display: grid;
+  grid-template-columns: 40% 15% 15% 30%;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.03);
+  background: white;
+  border-radius: 5px;
+  font-size: 0.7rem;
+}
+.roadmap .list .task > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.roadmap .list .task > *:not(:last-child) {
+  border-right: 1px dashed rgba(128, 128, 128, 0.3);
+}
+.roadmap .list .task-description p {
+  padding: 0.7rem;
+  color: grey;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.roadmap .list .task-evolution p {
+  margin-left: 1rem;
+}
+.roadmap .list .task-evolution .length {
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  width: 70%;
+  height: 20%;
+  border-radius: 100px;
+  overflow: hidden;
+}
+.roadmap .list .task-evolution .length div {
+  height: 100%;
+  background: #68dd99;
+}
+
+.backlog {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 80% 10%;
+}
+.backlog .title {
+  display: flex;
+  align-items: center;
+}
+.backlog .title p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #7b2cbf;
+  margin-left: 2rem;
+}
+.backlog .list {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+.backlog .list .us {
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.03);
+  padding: 1rem;
+  border-radius: 5px;
+  width: 92%;
+  margin: 0.5rem auto;
+  background: white;
+  background-size: cover;
+  height: fit-content;
+}
+.backlog .list .us-text p {
+  color: grey;
+  font-size: 0.9rem;
+}
+.backlog .list .us-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.backlog .list .us-btn button:nth-child(1) i {
+  color: #808080;
+}
+.backlog .list .us-btn button:nth-child(2) i {
+  color: #808080;
+}
+.backlog .list .us-btn button:nth-child(3) i {
+  color: rgb(255, 58, 58);
+}
+.backlog .list .us-btn > * {
+  margin: 0 0.4rem;
+  background: transparent;
+}
+.backlog .list .us-btn > *:active i {
+  filter: brightness(1.2);
+}
+.backlog .form {
+  display: grid;
+  place-items: center;
+  border-top: 1px dashed rgba(128, 128, 128, 0.384);
+}
+.backlog .form form > * {
+  margin: 0.5rem;
+}
+.backlog .form form input {
+  background: rgba(245, 230, 255, 0.2823529412);
+  color: grey;
+}
+.backlog .form form button,
+.backlog .form form input {
+  border: 0;
+  padding: 0.5rem;
+  border-radius: 3px;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.03);
+}
+.backlog .form form button {
+  color: white;
+  background: #7b2cbf;
+}
+.backlog .form form button:active {
+  filter: brightness(1.2);
+}
+.backlog .form form button i {
+  color: white;
+}
+
+.sprint {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5% 5% 90%;
+}
+.sprint .title {
+  display: flex;
+  align-items: center;
+}
+.sprint .title p {
+  margin: 0 1rem;
+  color: #7b2cbf;
+  font-size: 1.3rem;
+}
+.sprint .btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.sprint .btn > * {
+  margin: 0 0.5rem;
+}
+.sprint .btn a:hover i {
+  transform: rotate(360deg);
+}
+.sprint .btn a i {
+  font-size: 1.4rem;
+  margin-right: 1rem;
+  transition: 1s;
+}
+.sprint .btn button {
+  padding: 0.7rem;
+  color: white;
+  background: #7b2cbf;
+  border-radius: 5px;
+}
+.sprint .btn button:hover i {
+  transform: rotate(360deg);
+}
+.sprint .btn button:active {
+  filter: brightness(1.2);
+}
+.sprint .btn button i {
+  transition: 1s;
+  color: white;
+  margin-left: 0.5rem;
+}
+.sprint .list {
+  overflow-y: auto;
+}
+.sprint .list .sprint-box {
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.03);
+  width: 90%;
+  border-radius: 5px;
+  height: fit-content;
+  margin: 1rem auto;
+  background-color: white;
+}
+.sprint .list .sprint-box-info {
+  padding: 0.5rem 0;
+  background-color: #F4E5FE;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px dashed rgba(128, 128, 128, 0.527);
+}
+.sprint .list .sprint-box-info p {
+  margin: 0 1rem;
+  color: rgb(34, 34, 34);
+  font-size: 0.9rem;
+}
+.sprint .list .sprint-box-info p:nth-child(1) {
+  font-size: 1rem;
+  color: #7b2cbf;
+  font-weight: 700;
+}
+.sprint .list .sprint-box-info-btn {
+  margin-left: auto;
+}
+.sprint .list .sprint-box-info-btn button {
+  padding: 0.7rem;
+  color: white;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+.sprint .list .sprint-box-info-btn button:nth-child(1) {
+  background-color: #68dd99;
+}
+.sprint .list .sprint-box-info-btn button:nth-child(2) {
+  background-color: rgb(253, 41, 41);
+  margin: 0rem 1rem 0 0.5rem;
+}
+.sprint .list .sprint-box-list {
+  display: flex;
+  flex-direction: column;
+}
+.sprint .list .sprint-box-list .item {
+  width: 95%;
+  margin: 0.4rem auto;
+  background: rgba(231, 231, 231, 0.2);
+  border-radius: 5px;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 90% 10%;
+}
+.sprint .list .sprint-box-list .item > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sprint .list .sprint-box-list .item input {
+  transform: scale(1.5);
+}
+
+.login p {
+  text-align: center;
+}
+.login p:nth-child(1) {
+  text-align: center;
+  margin: 2rem;
+  font-size: 1.5rem;
+  color: #7b2cbf;
+  font-weight: 700;
+}
+.login form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.login form label {
+  margin: 0.5rem 0;
+}
+.login form input,
+.login form button {
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+  outline: 0;
+}
+.login form input {
+  padding: 0.5rem;
+}
+.login form button[type^=submit] {
+  background: #7b2cbf;
+  color: white;
+  font-size: 1rem;
+  padding: 1.5rem 2.5rem;
+  border-radius: 100px;
+  border: 0;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  border-radius: 2px;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  color: white;
+}
+.login form button[type^=submit]:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.login form button[type^=submit]:active {
+  transform: scale(1);
+  filter: brightness(1.5);
+}
+.login form button[type^=submit]:hover {
+  transform: scale(1);
+}
+
+.warning {
+  text-align: center;
+}
+.warning > * {
+  margin: 0.5rem 0;
+}
+.warning i {
+  color: rgb(255, 174, 0);
+  font-size: 3rem;
+}
+.warning button {
+  width: 80%;
+  padding: 0.5rem;
+  border: 0;
+  color: white;
+  background: rgb(255, 54, 54);
+  border-radius: 5px;
+}
+.warning button:active {
+  filter: brightness(1.5);
+}
+
+.validation {
+  text-align: center;
+}
+.validation > * {
+  margin: 0.5rem 0;
+}
+.validation i {
+  color: #68dd99;
+  font-size: 3rem;
+}
+.validation button {
+  width: 80%;
+  padding: 0.5rem;
+  border: 0;
+  color: white;
+  background: #68dd99;
+  border-radius: 5px;
+}
+.validation button:active {
+  filter: brightness(1.5);
+}
+
+.add-project {
+  width: 25rem;
+}
+.add-project p {
+  margin: 1rem 0;
+  font-weight: 700;
+  color: #7b2cbf;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.add-project form {
+  display: flex;
+  flex-direction: column;
+}
+.add-project form > * {
+  margin: 0.5rem 0;
+}
+.add-project form button,
+.add-project form input, .add-project form select {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 0;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.add-project form button {
+  color: white;
+  background: #7b2cbf;
+}
+.add-project form button:active {
+  filter: brightness(1.1);
+}
+
+html,
+body,
+body::after,
+body::before,
+* {
+  margin: 0;
+  padding: 0;
+  color: #212529;
+  font-size: 100%;
+  font-family: "lato", Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input, select {
+  outline: 0;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+.selected {
+  background: rgba(223, 172, 255, 0.3);
+  border-left: 8px solid #7b2cbf;
+}
+
+/*# sourceMappingURL=style.css.map */

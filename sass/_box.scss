@@ -1,0 +1,126 @@
+@import "./mixins";
+
+// Login
+
+.login {
+  p {
+    text-align: center;
+  }
+  p:nth-child(1) {
+    text-align: center;
+    margin: 2rem;
+    font-size: 1.5rem;
+    color: $purple-1;
+    font-weight: 700;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    label {
+      margin: 0.5rem 0;
+    }
+    input,
+    button {
+      border: 0;
+      border-radius: 2px;
+      box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+      outline: 0;
+    }
+    input {
+      padding: 0.5rem;
+    }
+    button[type^="submit"] {
+      @include btn($purple-1, white, 1rem);
+      border-radius: 2px;
+      margin: 1rem 0;
+      padding: 0.5rem;
+      color: white;
+      &:hover {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+// WARNING BOX
+
+.warning {
+  text-align: center;
+  & > * {
+    margin: 0.5rem 0;
+  }
+  i {
+    color: rgb(255, 174, 0);
+    font-size: 3rem;
+  }
+  button {
+    width: 80%;
+    padding: 0.5rem;
+    border: 0;
+    color: white;
+    background: rgb(255, 54, 54);
+    border-radius: 5px;
+    &:active {
+      filter: brightness(1.5);
+    }
+  }
+}
+
+// VALIDATION BOX
+
+.validation {
+  text-align: center;
+  & > * {
+    margin: 0.5rem 0;
+  }
+  i {
+    color: #68dd99;
+    font-size: 3rem;
+  }
+  button {
+    width: 80%;
+    padding: 0.5rem;
+    border: 0;
+    color: white;
+    background: #68dd99;
+    border-radius: 5px;
+    &:active {
+      filter: brightness(1.5);
+    }
+  }
+}
+
+// ADD PROJECT
+
+.add-project {
+  width: 25rem;
+  p {
+    margin: 1rem 0;
+    font-weight: 700;
+    color: $purple-1;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    & > * {
+      margin: 0.5rem 0;
+    }
+    button,
+    input, select {
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: 0;
+      box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+    }
+    button {
+      color: white;
+      background: $purple-1;
+      &:active {
+        filter: brightness(1.1);
+      }
+    }
+  }
+}

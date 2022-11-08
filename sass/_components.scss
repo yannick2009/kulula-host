@@ -1,0 +1,41 @@
+@import "./import";
+@import "./mixins";
+
+.header_home {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(40deg, #3c096cec, #7a2cbf8c),
+    url("/img/background/bkg.jpg");
+  background-size: cover;
+  background-position: left;
+  display: grid;
+  grid-template: 1fr / 50% 50%;
+}
+
+.interface {
+  height: 100vh;
+  width: 100%;
+  background: $white;
+  display: grid;
+  grid-template: 7% 93% / 1fr;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.box {
+  width: 15rem;
+  height: fit-content;
+  background: $white;
+  padding: 2rem;
+  @include absolute-center;
+  border-radius: 5px;
+}

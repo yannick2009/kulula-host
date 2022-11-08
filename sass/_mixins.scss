@@ -1,0 +1,25 @@
+@mixin btn($bcolor, $color, $size) {
+  background: $bcolor;
+  color: $color;
+  font-size: $size;
+  padding: 1.5rem 2.5rem;
+  border-radius: 100px;
+  border: 0;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+  &:active {
+    transform: scale(1);
+    filter: brightness(1.5);
+  }
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
